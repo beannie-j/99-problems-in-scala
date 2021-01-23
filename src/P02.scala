@@ -7,6 +7,7 @@ object P02 extends App{
     l.init.last
   }
 
+//  takeRight() method, which selects the last n elements from the list. The last-nth element is then the head of the resulting list.
   def lastNth[A](n: Int, l: List[A]): A = {
     if (n <= 0) throw new IllegalArgumentException
     if (n > l.length) throw new NoSuchElementException
