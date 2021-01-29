@@ -30,6 +30,9 @@ class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
 }
 
 object ListTest extends App {
-  val listOfIntegers: MyList[Int] = Empty
-  val listofStrings: MyList[String] = Empty
+  val listOfIntegers: MyList[Int] = new Cons(1, new Cons(2, new Cons(3, Empty)))
+  val listOfStrings: MyList[String] = new Cons("Learning", new Cons("Scala", new Cons("is Fun!", Empty)))
+
+  println(listOfIntegers.toString)
+  println(listOfStrings.toString)
 }
